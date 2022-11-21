@@ -20,8 +20,6 @@ public class MyMathClass {
         System.out.println("~~~~~~~~~~~***********~~~~~~~~~~~");
         System.out.println("("+sayi1+")^("+sayi2 + ") = " +Math.pow(sayi1,sayi2));     //Math.pow Kütüphanesi Kullanarak Edinilen Sonuç
         System.out.println("("+sayi1+")^("+sayi2 + ") = " +MyMath.pow(sayi1,sayi2));   //Math.exp ve Math.log Kütüphanesi Kullanılarak Edinilen Sonuç
-        System.out.println("("+sayi1+")^("+sayi2 + ") = " +MyMath.aUssu(sayi1,sayi2)); //Double Sayının Double Üssü
-        System.out.println("("+sayi1+")^("+sayi3 + ") = " +MyMath.aUssu(sayi1,sayi3)); //Double Sayının İnteger Üssü
         System.out.println("Ln("+sayi1+ ") = " +MyMath.Ln(sayi1));              //Ln sayı
         System.out.println("(e)^("+ sayi3 + ") = "  + MyMath.eUssu(sayi3));     //e sayısı(2.7182818284590452353602874713527)nın İnteger Üssü
         System.out.println("(e)^("+ sayi1 + ") = "  + MyMath.eUssu(sayi1));     //e sayısı(2.7182818284590452353602874713527)nın Double Üssü
