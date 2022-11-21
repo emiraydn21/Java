@@ -22,31 +22,6 @@ public class MyMath {
 
     }
 
-    public static double aUssu(double a, int x) {
-        double sonuc = 1;
-        for (int i = 1; i <= x; i++) {
-            sonuc *= a;
-        }
-        return sonuc;
-    }
-
-    public static double aUssu(double a, double x) {
-
-        double aUssu = 1;
-        for (int i = 0; i < x;) {
-            if (x >= 1) {
-
-                aUssu = a * aUssu;  // ---->>>>  aUssu*=a;
-                x--;
-            } else {
-
-                aUssu *= Math.exp(x * Math.log(a));
-                x--;
-            }
-        }
-        return aUssu;
-    }
-
     public static double mutlakDeger(double x) {
         if (x < 0) {
             return x * -1;
@@ -63,7 +38,7 @@ public class MyMath {
         }
     }
 
-    public static byte ciftMi(int x) {
+    public static byte isEven(int x) {
         if (x % 2 == 0) {
             return 1;
         } else {
@@ -96,7 +71,7 @@ public class MyMath {
         double sonuc = 0;
 
         for (int i = 1; i < 10; i++) {
-            sonuc += ciftMi(i + 1) * (1 / aUssu(x - 1, i)) * aUssu(-x_int + x, i) / i;
+            sonuc += isEven(i + 1) * (1 / Math.pow(x - 1, i)) * Math.pow(-x_int + x, i) / i;
         }
 
         return sonuc + Ln(x - 1);
@@ -108,9 +83,9 @@ public class MyMath {
 
         if ((mutlakDeger(x) - x_int) == 0.0) {
             if (x > 0) {
-                return aUssu(e, x_int); 
+                return Math.pow(e, x_int); 
             } else {
-                return 1 / aUssu(e, x_int); 
+                return 1 / Math.pow(e, x_int); 
             }
         }
 
@@ -121,16 +96,16 @@ public class MyMath {
         double lna = mutlakDeger(x) / x_int;
         double a = eUssuK2(lna);
         if (x > 0) {
-            return aUssu(a, x_int); 
+            return Math.pow(a, x_int); 
         } else {
-            return 1 / aUssu(a, x_int); 
+            return 1 / Math.pow(a, x_int); 
         }
     }
 
     public static double eUssuK2(double x) {
         double sonuc = 0;
         for (int i = 0; i < 10; i++) {
-            sonuc += aUssu(x, i) / Faktoriyel(i);
+            sonuc += Math.pow(x, i) / Faktoriyel(i);
         }
 
         return sonuc;
