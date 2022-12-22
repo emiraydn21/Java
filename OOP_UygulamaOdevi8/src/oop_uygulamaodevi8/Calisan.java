@@ -13,6 +13,10 @@ public abstract class Calisan {
 
     public String getTC() {
         String sonDortHarf = TC.substring(TC.length()-4);
+        for (int i = 0; i < TC.length(); i++) {
+        if(!Character.isDigit(TC.charAt(i)))
+            return "Hatalı İfade Girdiniz.";
+            }
         return "*******" + sonDortHarf;
     }
 
@@ -77,7 +81,7 @@ class Main {
         System.out.println(müdür.ad = "Emir");
         System.out.println(müdür.soyad = "AYDIN");
         System.out.println(müdür.getMaas());
-        System.out.println("**********************");
+        System.out.println("--------------------");
         System.out.println(personel.getTC());
         System.out.println(personel.ad = "Ahmet");
         System.out.println(personel.soyad = "ACIR");
