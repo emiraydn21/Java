@@ -7,7 +7,7 @@ Yapılması İstenenler :
 - Page Object Pattern kullanmanız gerekmektedir.✅ 
 - Kod temiz ve okunabilir olmalıdır.✅ 
 - Gauge ve Cucumber framework’leri kullanılmayacaktır.✅ 
-# Selenium Web Otomasyon ·
+ Selenium Web Otomasyon ·
 ✅ 1. https://www.setur.com.tr/ sayfasına gidilir.
 ✅ 2. setur url’nin geldiği kontrol edilir.
 ✅ 3. Ana sayfada Otel tabının default geldiği kontrol edilir,
